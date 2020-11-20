@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<style>
+body {
+background: #000;
+padding: 2rem;
+}
+
+h2 {
+font-family: 'Arial';
+color: #fff;
+text-transform: uppercase;
+font-weight: bold;
+font-size: 3rem;
+line-height: 0.75;
+}
+
+span {
+display: block;
+}
+
+span:not(.light) {
+opacity: 0;
+animation: flashText .5s ease-out alternate infinite;
+}
+
+span.light {
+position: relative;
+display: inline-block;
+
+&:before {
+  position: absolute;
+  left: 0;
+  top: -10%;
+  width: 100%;
+  height: 120%;
+  background: #fff;
+  filter: blur(10px);
+  content: "";
+  opacity: 0;
+  animation: flash .5s ease-out alternate infinite;
+}
+}
+
+@keyframes flash{
+to {
+  opacity: 1;
+}
+}
+
+@keyframes flashText {
+to {
+  opacity: 0.15;
+}
+}
+.btn {
+  display: inline-block;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.625rem;
+  letter-spacing: 0.3em;
+  color: rgba(223,190,106,0.7);
+  border-radius: 0;
+  padding: 18px 80px 20px;
+  transition: all 0.7s ease-out;
+  background: linear-gradient(270deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+  background-position: 1% 50%;
+  background-size: 300% 300%;
+  text-decoration: none;
+  margin: 0.625rem;
+  border: none;
+  border: 1px solid rgba(223,190,106,0.3);
+}
+
+.btn:hover {
+  color: #fff;
+  border: 1px solid rgba(223,190,106,0);
+  color: $white;
+  background-position: 99% 50%;
+}
+
+body {
+  background: #231f20;
+  color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arials, sans;
+}
+
+
+
+
+
+article {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+</style>
+<body>
+  <h2>
+  <span>우리는</span>
+  <span class="light">오빠고</span>
+  <span> 인공지능</span>
+  <span>에 대해서</span>
+  <span>알아보고자합니다.</span>
+</h2>
+
+<a class="btn" href=".\..\최용준\html\인공지능의 역사.html">인공지능의 역사</a><a class="btn" href=".\..\고도영\html\인공지능의 개념 및 원리.html">인공지능의 개념 및 원리 </a>
+<a class="btn" href=".\..\정민규\html\인공지능의 윤리.html">인공지능의 윤리</a><a class="btn" href=".\..\정지오\html\menu.html">인공지능의 미래 </a>
+
+</body>
+</html>
